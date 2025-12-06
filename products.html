@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Products - Modern Lifestyle Decor</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    :root { --gold: #D4A656; --charcoal: #1A1A1A; --offwhite: #FAF9F6; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter',sans-serif; background:var(--offwhite); color:var(--charcoal); overflow-x:hidden; }
+    .container { max-width:1520px; margin:0 auto; padding:0 30px; }
+
+    /* Header with Perfect Logo */
+    header { 
+        background:white; 
+        padding:18px 0; 
+        position:fixed; 
+        width:100%; 
+        top:0; 
+        z-index:1000; 
+        box-shadow:0 10px 40px rgba(0,0,0,0.08); 
+    }
+    .header-inner { 
+        display:flex; 
+        justify-content:space-between; 
+        align-items:center; 
+        height:80px; 
+    }
+    .logo img {
+        height:68px;
+        width:auto;
+        max-width:280px;
+        object-fit:contain;
+        transition:0.3s;
+    }
+    .logo img:hover { transform:scale(1.05); }
+    .back-btn { 
+        padding:14px 42px; 
+        background:var(--gold); 
+        color:white; 
+        text-decoration:none; 
+        border-radius:50px; 
+        font-weight:600; 
+        letter-spacing:1.8px; 
+        box-shadow:0 10px 30px rgba(212,166,86,0.4);
+        transition:0.4s;
+    }
+    .back-btn:hover { transform:translateY(-5px); box-shadow:0 18px 40px rgba(212,166,86,0.5); }
+
+    /* Hero */
+    .hero-title { 
+        padding:180px 0 100px; 
+        text-align:center; 
+    }
+    .hero-title h1 { 
+        font:700 5.8rem 'Playfair Display',serif; 
+        background:linear-gradient(45deg,#D4A656,#F4D58D);
+        -webkit-text-fill-color:transparent;
+        margin-bottom:20px;
+    }
+    .hero-title p { font-size:1.45rem; color:#666; max-width:900px; margin:0 auto; }
+
+    /* Products Grid */
+    .products-grid { 
+        display:grid; 
+        grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); 
+        gap:60px; 
+        padding:80px 0 160px; 
+    }
+    .product-card { 
+        background:white; 
+        border-radius:28px; 
+        overflow:hidden; 
+        box-shadow:0 20px 50px rgba(0,0,0,0.1); 
+        transition:0.6s cubic-bezier(0.25,0.8,0.25,1);
+        cursor:pointer;
+    }
+    .product-card:hover { 
+        transform:translateY(-25px); 
+        box-shadow:0 50px 100px rgba(212,166,86,0.3); 
+    }
+    .product-card img { 
+        width:100%; 
+        height:440px; 
+        object-fit:cover; 
+        transition:0.7s; 
+    }
+    .product-card:hover img { transform:scale(1.1); }
+    .product-info { 
+        padding:38px 25px; 
+        text-align:center; 
+    }
+    .product-info h3 { 
+        font-size:1.65rem; 
+        font-weight:600; 
+        letter-spacing:2.8px; 
+        color:var(--charcoal); 
+    }
+    .product-info p { 
+        margin-top:10px; 
+        color:#777; 
+        font-size:1.05rem; 
+    }
+
+    /* WhatsApp Float */
+    .whatsapp-float {
+        position:fixed;
+        width:68px;
+        height:68px;
+        bottom:30px;
+        right:30px;
+        background:#25D366;
+        color:white;
+        border-radius:50%;
+        text-align:center;
+        font-size:34px;
+        box-shadow:0 8px 25px rgba(0,0,0,0.3);
+        z-index:999;
+        display:grid;
+        place-items:center;
+    }
+    .whatsapp-float:hover { transform:scale(1.1); }
+
+    footer { 
+        background:var(--charcoal); 
+        color:#ccc; 
+        text-align:center; 
+        padding:90px 0 50px; 
+        font-size:1.15rem; 
+    }
+
+    @media (max-width:768px) {
+        .logo img { height:55px; }
+        .header-inner { height:70px; }
+        .hero-title h1 { font-size:4.2rem; }
+        .products-grid { gap:40px; padding:60px 0 120px; }
+        .product-card img { height:380px; }
+    }
+</style>
+</head>
+<body>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+    WhatsApp
+</a>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <img src="LOGO-removebg-preview.png" alt="Modern Lifestyle Decor">
+        </div>
+        <a href="index.html" class="back-btn">BACK TO HOME</a>
+    </div>
+</header>
+
+<section class="hero-title">
+    <div class="container">
+        <h1>Our Complete Product Range</h1>
+        <p>Premium Mosquito Nets • Designer Blinds • Luxury Curtains & Rods • Pan India Service</p>
+    </div>
+</section>
+
+<div class="container products-grid">
+
+    <!-- ALL 23 PRODUCTS BELOW -->
+    <div class="product-card" onclick="location.href='pleated.html'"><img src="img1.jpeg" alt="Pleated"><div class="product-info"><h3>PLEATED MOSQUITO NET</h3><p>Slim • Retractable • Invisible Look</p></div></div>
+    <div class="product-card" onclick="location.href='security.html'"><img src="https://i.imgur.com/JhK9pLm.jpg" alt=""><div class="product-info"><h3>SECURITY PLEATED DOOR</h3><p>Anti-Theft + Mosquito Proof</p></div></div>
+    <div class="product-card" onclick="location.href='honeycomb.html'"><img src="https://i.imgur.com/ZfK5p9m.jpg" alt=""><div class="product-info"><h3>HONEYCOMB COMBINED</h3><p>Pleated + Cellular Shade</p></div></div>
+    <div class="product-card" onclick="location.href='magnet.html'"><img src="https://i.imgur.com/QpL2mNx.jpg" alt=""><div class="product-info"><h3>MAGNET OPEN TYPE</h3><p>Easy Access Window</p></div></div>
+    <div class="product-card" onclick="location.href='ssopen.html'"><img src="https://i.imgur.com/RtY9kLm.jpg" alt=""><div class="product-info"><h3>SS OPEN TYPE</h3><p>Stainless Steel Frame</p></div></div>
+    <div class="product-card" onclick="location.href='shutter.html'"><img src="https://i.imgur.com/WqX4vZp.jpg" alt=""><div class="product-info"><h3>SHUTTER TYPE NET</h3><p>Rolling Shutter Style</p></div></div>
+    <div class="product-card" onclick="location.href='velcro.html'"><img src="https://i.imgur.com/EfG7hJk.jpg" alt=""><div class="product-info"><h3>VELCRO TYPE NET</h3><p>Removable & Washable</p></div></div>
+    <div class="product-card" onclick="location.href='roller.html'"><img src="https://i.imgur.com/RvB9kLm.jpg" alt=""><div class="product-info"><h3>ROLLER BLINDS</h3><p>Blackout & Designer</p></div></div>
+    <div class="product-card" onclick="location.href='zebra.html'"><img src="https://i.imgur.com/TxD7vMq.jpg" alt=""><div class="product-info"><h3>ZEBRA BLINDS</h3><p>Dual Layer Control</p></div></div>
+    <div class="product-card" onclick="location.href='wooden.html'"><img src="https://i.imgur.com/WaG4vQt.jpg" alt=""><div class="product-info"><h3>WOODEN VENETIAN</h3><p>Real Wood Luxury</p></div></div>
+    <div class="product-card" onclick="location.href='aluminium.html'"><img src="https://i.imgur.com/XbH3vRu.jpg" alt=""><div class="product-info"><h3>ALUMINIUM VENETIAN</h3><p>Moisture Resistant</p></div></div>
+    <div class="product-card" onclick="location.href='pvc.html'"><img src="https://i.imgur.com/StZ1vBi.jpg" alt=""><div class="product-info"><h3>PVC BALCONY BLINDS</h3><p>Weatherproof Outdoor</p></div></div>
+    <div class="product-card" onclick="location.href='ziptrack.html'"><img src="https://i.imgur.com/YcI2vSv.jpg" alt=""><div class="product-info"><h3>ZIP-TRACK BLINDS</h3><p>Windproof • No Gap</p></div></div>
+    <div class="product-card" onclick="location.href='curtains.html'"><img src="https://i.imgur.com/AeK0vUx.jpg" alt=""><div class="product-info"><h3>DESIGNER CURTAINS</h3><p>Custom Luxury Fabrics</p></div></div>
+    <div class="product-card" onclick="location.href='curtains.html'"><img src="https://i.imgur.com/BfL1vTw.jpg" alt=""><div class="product-info"><h3>SHEER CURTAINS</h3><p>Light & Elegant</p></div></div>
+    <div class="product-card" onclick="location.href='curtains.html'"><img src="https://i.imgur.com/CgM2vUx.jpg" alt=""><div class="product-info"><h3>BLACKOUT CURTAINS</h3><p>100% Light Block</p></div></div>
+    <div class="product-card" onclick="location.href='rods.html'"><img src="https://i.imgur.com/DhN3vVy.jpg" alt=""><div class="product-info"><h3>DESIGNER CURTAIN RODS</h3><p>Italian & German Finish</p></div></div>
+    <div class="product-card" onclick="location.href='rods.html'"><img src="https://i.imgur.com/rod2.jpg" alt=""><div class="product-info"><h3>M TRACK CHANNELS</h3><p>Silent & Smooth</p></div></div>
+    <div class="product-card" onclick="location.href='rods.html'"><img src="https://i.imgur.com/rod3.jpg" alt=""><div class="product-info"><h3>HOSPITAL TRACKS</h3><p>Medical Grade</p></div></div>
+    <div class="product-card" onclick="location.href='motorized.html'"><img src="https://i.imgur.com/motor1.jpg" alt=""><div class="product-info"><h3>MOTORIZED BLINDS</h3><p>Remote & Voice Control</p></div></div>
+    <div class="product-card" onclick="location.href='roman.html'"><img src="https://i.imgur.com/roman1.jpg" alt=""><div class="product-info"><h3>ROMAN BLINDS</h3><p>Classic Elegance</p></div></div>
+    <div class="product-card" onclick="location.href='vertical.html'"><img src="https://i.imgur.com/vert1.jpg" alt=""><div class="product-info"><h3>VERTICAL BLINDS</h3><p>Office & Home</p></div></div>
+    <div class="product-card" onclick="location.href='bamboo.html'"><img src="https://i.imgur.com/bamboo1.jpg" alt=""><div class="product-info"><h3>BAMBOO CHICK BLINDS</h3><p>Natural & Eco-Friendly</p></div></div>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2025 Modern Lifestyle Decor • Premium Window Solutions Across India</p>
+        <p>WhatsApp / Call: +91 98765 43210</p>
+    </div>
+</footer>
+
+</body>
+</html>
