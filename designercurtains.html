@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackout Roller Blinds | 100% Darkness - Modern Lifestyle Decor</title>
+    <!-- Favicon - Shows your logo in browser tab -->
+<link rel="icon" type="image/png" href="LOGO-removebg-preview.png">
+<link rel="apple-touch-icon" href="LOGO-removebg-preview.png">
+    <meta name="description" content="Premium 100% blackout roller blinds with triple-layer fabric. Complete darkness, heat insulation & noise reduction. Free measurement & installation across India.">
+    <meta name="keywords" content="blackout roller blinds, 100% blackout blinds, room darkening, bedroom blinds india">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #D4A656;
+            --gold-gradient: linear-gradient(135deg, #D4A656 0%, #E8C97C 100%);
+            --charcoal: #121212;
+            --offwhite: #FAF9F6;
+            --transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            --radius: 20px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--offwhite); color: var(--charcoal); line-height: 1.7; overflow-x: hidden; }
+
+        .container { max-width: 1480px; margin: 0 auto; padding: 0 40px; }
+
+        /* HEADER – PERFECTLY ALIGNED NAVBAR */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 249, 246, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 166, 86, 0.1);
+            padding: 10px 0;
+            transition: var(--transition);
+        }
+        header.scrolled { padding: 5px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo img { height: 70px; transition: var(--transition); }
+        .logo:hover img { transform: scale(1.05); }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            line-height: 1;
+        }
+        .logo-text span {
+            color: var(--gold);
+            display: block;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            margin-top: 4px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        .nav a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1.2px;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+        .nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+        .nav a:hover, .nav a.active {
+            color: var(--gold);
+        }
+        .nav a:hover:after, .nav a.active:after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .hamburger span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: var(--charcoal);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+        /* Rest of your styles (hero, footer, etc.) – unchanged and perfect */
+        .product-hero { padding: 180px 0 100px; background: linear-gradient(135deg, #FAF9F6 0%, #F5F1E8 100%); }
+        .product-hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+
+        .main-image { height: 500px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+        .main-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+        .main-image:hover img { transform: scale(1.05); }
+
+        .thumbnail-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 20px; }
+        .thumbnail { height: 100px; border-radius: 12px; overflow: hidden; cursor: pointer; opacity: 0.7; border: 2px solid transparent; transition: var(--transition); }
+        .thumbnail.active, .thumbnail:hover { opacity: 1; border-color: var(--gold); transform: scale(1.05); }
+        .thumbnail img { width: 100%; height: 100%; object-fit: cover; }
+
+        .product-category { color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 15px; }
+        .product-title { font-size: 3.2rem; margin-bottom: 25px; }
+        .product-description { font-size: 1.1rem; color: #555; margin-bottom: 40px; line-height: 1.8; }
+
+        .features-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 15px; }
+        .features-list i { color: var(--gold); font-size: 1.2rem; min-width: 24px; }
+
+        .btn { display: inline-block; padding: 18px 50px; background: var(--gold-gradient); color: white; border: none; border-radius: 50px;
+               font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; box-shadow: var(--shadow); transition: var(--transition);
+               text-decoration: none; margin-right: 20px; }
+        .btn:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+        .btn-outline { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
+        .btn-outline:hover { background: var(--gold); color: white; }
+
+        .fab { position: fixed; bottom: 30px; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+               box-shadow: 0 10px 30px rgba(0,0,0,0.2); z-index: 999; color: white; font-size: 1.8rem; }
+        .whatsapp { right: 30px; background: linear-gradient(135deg, #25D366, #128C7E); }
+        .call { right: 110px; background: linear-gradient(135deg, #0078d4, #106ebe); }
+
+        /* Perfect Footer */
+        footer {
+            background: var(--charcoal);
+            color: #ccc;
+            padding: 120px 0 60px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 80px;
+            max-width: 1400px;
+            margin: 0 auto 80px;
+            padding: 0 40px;
+        }
+        .footer-about .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .footer-about .logo-text span {
+            color: var(--gold);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            display: block;
+            margin-top: 8px;
+        }
+        .footer-about p { font-size: 1.02rem; line-height: 1.8; color: #bbb; max-width: 420px; }
+        .footer-links h3, .footer-contact h3 {
+            font-size: 1.35rem;
+            color: white;
+            margin-bottom: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        .footer-links a:hover { color: var(--gold); padding-left: 8px; }
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+            font-size: 1rem;
+            color: #ccc;
+        }
+        .footer-contact i { color: var(--gold); font-size: 1.1rem; width: 22px; }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 50px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: #777;
+            font-size: 0.95rem;
+        }
+        .footer-bottom p:last-child { margin-top: 12px; font-size: 0.82rem; color: #555; }
+
+        @media (max-width: 992px) {
+            .product-hero-content { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; gap: 60px; text-align: center; padding: 0 20px; }
+            .footer-contact p { justify-content: center; }
+            .hamburger { display: flex; }
+            .nav { display: none; position: fixed; top: 0; right: 0; width: 300px; height: 100vh; background: white;
+                   flex-direction: column; padding: 100px 40px 40px; box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+                   transform: translateX(100%); transition: transform 0.4s ease; }
+            .nav.active { transform: translateX(0); display: flex; }
+        }
+        @media (max-width: 768px) {
+            .thumbnail-grid { grid-template-columns: repeat(2, 1fr); }
+            .product-title { font-size: 2.5rem; }
+            .main-image { height: 400px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/918667754943" class="fab whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+918667754943" class="fab call"><i class="fas fa-phone-alt"></i></a>
+
+    <!-- Header – NAVBAR NOW PERFECTLY ALIGNED -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="display:flex;align-items:center;gap:15px;text-decoration:none;">
+                    <img src="LOGO-removebg-preview.png" alt="Modern Lifestyle Decor">
+                    <div class="logo-text">
+                        Modern Lifestyle Decor
+                        <span>Premium Window Solutions</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#products">Products</a>
+                <a href="index.html#gallery">Gallery</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="product-hero">
+        <div class="container">
+            <div class="product-hero-content">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="mainImage" src="blackout1.jpg" alt="100% Blackout Roller Blinds">
+                    </div>
+                    <div class="thumbnail-grid">
+                        <div class="thumbnail active" data-image="blackoutroller.jpg">
+                            <img src="blackoutroller.jpg" alt="View 1">
+                        </div>
+                        <div class="thumbnail" data-image="blackout2.jpg">
+                            <img src="blackout2.jpg" alt="View 2">
+                        </div>
+                        <div class="thumbnail" data-image="blackout3.jpg">
+                            <img src="blackout3.jpg" alt="View 3">
+                        </div>
+                        <div class="thumbnail" data-image="blackout4.jpg">
+                            <img src="blackout4.jpg" alt="View 4">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <div class="product-category">Roller Blinds</div>
+                    <h1 class="product-title">100% Blackout Roller Blinds</h1>
+                    <p class="product-description">
+                        Experience true darkness even in broad daylight. Our premium blackout roller blinds use triple-layer fabric technology to block 100% of light — perfect for bedrooms, home theaters, and shift workers.
+                    </p>
+                    <ul class="features-list">
+                        <li>100% Light Blockage – No light leaks</li>
+                        <li>Triple-layer blackout fabric</li>
+                        <li>Heat & UV protection – saves energy</li>
+                        <li>Noise reduction properties</li>
+                        <li>Motorized & smart home compatible</li>
+                        <li>Side channels for zero light gaps</li>
+                        <li>Child-safe cordless design</li>
+                        <li>7-Year warranty + Free installation</li>
+                    </ul>
+                    <a href="https://wa.me/918667754943?text=Hi, I'm interested in Blackout Roller Blinds" class="btn" target="_blank">Get Free Quote</a>
+                    <a href="tel:+918667754943" class="btn btn-outline">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer – Already Perfect -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="logo-text">
+                    Modern Lifestyle Decor
+                    <span>Premium Window Solutions</span>
+                </div>
+                <p>Elevating homes across India with luxury curtains, designer blinds, and premium mosquito nets since 2010. We provide custom solutions for homes and offices.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Our Products</h3>
+                <ul>
+                    <li><a href="pleated.html">Pleated Mosquito Net</a></li>
+                    <li><a href="zip-track-blinds.html">Zip-Track Blinds</a></li>
+                    <li><a href="wooden-venetian.html">Wooden Venetian Blinds</a></li>
+                    <li><a href="designer-curtains.html">Designer Curtains</a></li>
+                    <li><a href="zebra.html">Zebra Blinds</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone-alt"></i> +91 866 775 4943</p>
+                <p><i class="fas fa-envelope"></i> info@modernlifestyledecor.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Serving Pan India</p>
+                <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM – 8:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Modern Lifestyle Decor. All rights reserved. | Premium Mosquito Nets, Blinds & Curtains Across India</p>
+            <p>Design by Brand Marketers</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('hamburger').addEventListener('click', () => {
+            document.getElementById('hamburger').classList.toggle('active');
+            document.getElementById('nav').classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            document.getElementById('header').classList.toggle('scrolled', window.scrollY > 100);
+        });
+
+        const mainImage = document.getElementById('mainImage');
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                mainImage.src = this.dataset.image;
+            });
+        });
+    </script>
+</body>
+</html>

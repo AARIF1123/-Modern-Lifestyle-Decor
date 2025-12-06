@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Lifestyle Decor offers premium mosquito nets, designer blinds, luxury curtains, and window solutions across India. Get expert installation and free consultation.">
+    <meta name="keywords" content="premium mosquito nets, designer blinds, luxury curtains, window treatments, home decor, India">
+    <title>Modern Lifestyle Decor | Premium Mosquito Nets, Blinds & Curtains</title>
+    <!-- Favicon - Shows your logo in browser tab -->
+<link rel="icon" type="image/png" href="LOGO-removebg-preview.png">
+<link rel="apple-touch-icon" href="LOGO-removebg-preview.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #D4A656;
+            --gold-light: #F4E4C1;
+            --gold-gradient: linear-gradient(135deg, #D4A656 0%, #E8C97C 100%);
+            --charcoal: #121212;
+            --charcoal-light: #2A2A2A;
+            --offwhite: #FAF9F6;
+            --cream: #F8F5F0;
+            --transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 30px 80px rgba(212, 166, 86, 0.2);
+            --radius: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--offwhite);
+            color: var(--charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1480px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gold-gradient);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 249, 246, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 166, 86, 0.1);
+            padding: 10px 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 5px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 70px;
+            width: auto;
+            transition: var(--transition);
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            color: var(--gold);
+            display: block;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1.2px;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: var(--gold);
+        }
+
+        .nav a:hover:after {
+            width: 100%;
+        }
+
+        .nav a.active {
+            color: var(--gold);
+        }
+
+        .nav a.active:after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: var(--charcoal);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2153&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            font-weight: 900;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 700px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 50px;
+            background: var(--gold-gradient);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s;
+            z-index: -1;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn:hover:before {
+            left: 100%;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            margin-left: 20px;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: white;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 120px 0;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: var(--offwhite);
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(212, 166, 86, 0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(212, 166, 86, 0.3);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--charcoal);
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 140px 0;
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .gallery-wrapper {
+            position: relative;
+            padding: 30px 0;
+        }
+
+        .gallery-track {
+            display: flex;
+            gap: 40px;
+            animation: scroll 50s linear infinite;
+            width: max-content;
+        }
+
+        .gallery-track:hover {
+            animation-play-state: paused;
+        }
+
+        .gallery-card {
+            flex: 0 0 380px;
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-20px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .gallery-card:hover .gallery-img {
+            transform: scale(1.1);
+        }
+
+        .gallery-card-content {
+            padding: 25px;
+            position: relative;
+            background: white;
+        }
+
+        .gallery-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--charcoal);
+        }
+
+        .gallery-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .gallery-card-price {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Categories Section */
+        .categories {
+            padding: 120px 0;
+            background: white;
+        }
+
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 60px;
+        }
+
+        .cat-item {
+            background: var(--offwhite);
+            border-radius: var(--radius);
+            padding: 50px 40px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .cat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .cat-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--gold);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .cat-item h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .cat-item ul {
+            list-style: none;
+        }
+
+        .cat-item li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .cat-item li:before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .cat-item a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .cat-item a:hover {
+            color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 120px 0;
+            background: var(--cream);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            margin-bottom: 30px;
+        }
+
+        .about-text p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 120px 0;
+            background: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            background: var(--offwhite);
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 4rem;
+            color: rgba(212, 166, 86, 0.2);
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            margin-bottom: 25px;
+            font-style: italic;
+            color: #555;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gold-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2158&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 3.2rem;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Floating Buttons */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: var(--transition);
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .whatsapp {
+            right: 30px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        }
+
+        .call {
+            right: 110px;
+            background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+        }
+
+        .fab:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: #ccc;
+            padding: 100px 0 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            margin-bottom: 25px;
+        }
+
+        .footer-logo .logo-text {
+            color: white;
+        }
+
+        .footer-logo .logo-text span {
+            color: var(--gold);
+        }
+
+        .footer-about p {
+            margin-bottom: 25px;
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-links h3, .footer-contact h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-contact i {
+            color: var(--gold);
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+            
+            .section-title {
+                font-size: 2.8rem;
+            }
+            
+            .container {
+                padding: 0 30px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 300px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 100px 40px 40px;
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+                transform: translateX(100%);
+                transition: transform 0.4s ease;
+            }
+            
+            .nav.active {
+                transform: translateX(0);
+                display: flex;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            
+            .gallery-card {
+                flex: 0 0 320px;
+            }
+            
+            .gallery-img {
+                height: 380px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.3rem;
+            }
+            
+            .cta-content h2 {
+                font-size: 2.5rem;
+            }
+            
+            .btn {
+                padding: 15px 35px;
+                font-size: 0.9rem;
+            }
+            
+            .cat-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .fab {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .call {
+                right: 90px;
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            
+            .gallery-card {
+                flex: 0 0 280px;
+            }
+            
+            .gallery-img {
+                height: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Action Buttons -->
+    <a href="https://wa.me/918667754943" class="fab whatsapp" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+918667754943" class="fab call" aria-label="Call">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="LOGO-removebg-preview.png" alt="Modern Lifestyle Decor">
+                <div class="logo-text">
+                    Modern Lifestyle Decor
+                    <span>Premium Window Solutions</span>
+                </div>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="#home" class="active">Home</a>
+                <a href="#products">Products</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#about">About</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Elevate Your Living Spaces with <span>Premium Window Elegance</span></h1>
+                <p>India's leading provider of designer mosquito nets, luxury blinds, and custom curtains. Expert installation with 10+ years of excellence serving homes across the nation.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/918667754943" class="btn" target="_blank">Get Free Consultation</a>
+                    <a href="#gallery" class="btn btn-outline">View Collections</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Modern Lifestyle Decor</h2>
+            <p class="section-subtitle">We combine premium materials with expert craftsmanship to deliver window solutions that enhance both aesthetics and functionality.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>We use only the finest materials - from durable fiberglass nets to premium fabrics - ensuring longevity and superior performance.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h3>Custom Fit</h3>
+                    <p>Every product is meticulously measured and custom-made to fit your windows perfectly, ensuring seamless integration.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Expert Installation</h3>
+                    <p>Our skilled technicians ensure flawless installation with attention to detail, backed by comprehensive after-sales service.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Pan India Service</h3>
+                    <p>We serve clients across India with reliable delivery and installation services, bringing premium window solutions to your doorstep.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Premium Collections</h2>
+            <p class="section-subtitle">Explore our curated selection of designer window solutions that blend functionality with elegance.</p>
+            
+            <div class="gallery-wrapper">
+                <div class="gallery-track">
+                    <!-- Gallery items will be duplicated by JavaScript for infinite scroll -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Product Range</h2>
+            <p class="section-subtitle">Comprehensive solutions for every window in your home or office.</p>
+            
+            <div class="cat-grid">
+                <div class="cat-item">
+                    <h3>MOSQUITO NETS</h3>
+                    <ul>
+                        <li><a href="pleatedmosquitonet.html">Pleated Mosquito Net</a> - Retractable & space-saving</li>
+                        <li><a href="security pleated door.html">Security Pleated Door</a> - Protection with style</li>
+                        <li><a href="honeycomb.html">Pleated with Honeycomb</a> - Enhanced privacy</li>
+                        <li><a href="magnet.html">Magnet Open Type</a> - Easy access design</li>
+                        <li><a href="ssopen.html">SS Open Type Window</a> - Stainless steel frames</li>
+                        <li><a href="shutter.html">Shutter Type</a> - For sliding windows</li>
+                        <li><a href="velcro.html">Velcro Type</a> - Simple & effective solution</li>
+                    </ul>
+                </div>
+                
+                <div class="cat-item">
+                    <h3>DESIGNER BLINDS</h3>
+                    <ul>
+                        <li><a href="roller.html">Roller Blinds</a> - Sleek & modern</li>
+                        <li><a href="zebra.html">Zebra Blinds</a> - Adjustable light control</li>
+                        <li><a href="wooden.html">Wooden Venetian Blinds</a> - Natural elegance</li>
+                        <li><a href="aluminium.html">Aluminium Venetian</a> - Durable & stylish</li>
+                        <li><a href="pvc.html">PVC Balcony Blinds</a> - Weather-resistant</li>
+                        <li><a href="ziptrack.html">Zip-Track Blinds</a> - Perfect seal technology</li>
+                    </ul>
+                </div>
+                
+                <div class="cat-item">
+                    <h3>CURTAINS & RODS</h3>
+                    <ul>
+                        <li><a href="curtains.html">Designer Curtains</a> - Custom fabric selections</li>
+                        <li><a href="curtains.html">Sheer Curtains</a> - Soft diffused light</li>
+                        <li><a href="curtains.html">Blackout Curtains</a> - Complete light control</li>
+                        <li><a href="rods.html">Designer Rods</a> - Elegant finishing</li>
+                        <li><a href="rods.html">M Track Channels</a> - Smooth operation</li>
+                        <li><a href="rods.html">Hospital Tracks</a> - Hygienic & durable</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Crafting Elegance Since 2010</h2>
+                    <p>Modern Lifestyle Decor began with a vision to transform ordinary windows into statements of elegance and functionality. With over a decade of expertise, we have become one of India's most trusted names in premium window solutions.</p>
+                    <p>Our commitment to quality craftsmanship, innovative designs, and customer satisfaction has helped us serve thousands of happy customers across residential, commercial, and hospitality sectors.</p>
+                    <p>We believe that windows are not just functional elements but opportunities to enhance your living experience through smart design and premium materials.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5000+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Cities Served</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Modern Lifestyle Decor Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Don't just take our word for it - hear from our satisfied customers across India.</p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The pleated mosquito nets transformed our home. Not only are they effective, but they look incredibly stylish. The installation was professional and quick."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RS</div>
+                        <div class="author-info">
+                            <h4>Rajesh Sharma</h4>
+                            <p>Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The zebra blinds in our living room are stunning! They provide perfect light control and have become a conversation piece. Excellent quality and service."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PM</div>
+                        <div class="author-info">
+                            <h4>Priya Mehta</h4>
+                            <p>Delhi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "From consultation to installation, the team was professional and attentive. Our blackout curtains have significantly improved our sleep quality."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div class="author-info">
+                            <h4>Anil Kumar</h4>
+                            <p>Bangalore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Windows?</h2>
+                <p>Contact us today for a free consultation and quotation. Our experts will help you select the perfect window solutions for your space.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/918667754943" class="btn" target="_blank">Chat on WhatsApp</a>
+                    <a href="tel:+918667754943" class="btn btn-outline">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-text">
+                            Modern Lifestyle Decor
+                            <span>Premium Window Solutions</span>
+                        </div>
+                    </div>
+                    <p>Transforming windows across India with premium mosquito nets, designer blinds, and luxury curtains since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone-alt"></i> +91 866 775 4943</p>
+                    <p><i class="fas fa-envelope"></i> info@modernlifestyledecor.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Serving Pan India</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Modern Lifestyle Decor. All rights reserved. | Premium Mosquito Nets, Blinds & Curtains Across India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('nav');
+        const navLinks = document.querySelectorAll('.nav a');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Active Navigation Link
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').substring(1) === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Gallery Items Data
+        const galleryItems = [
+            {
+                title: "Pleated Mosquito Net",
+                desc: "Retractable design that saves space while providing complete mosquito protection.",
+                image: "pleated.jpeg",
+                link: "pleatedmosquitonet.html"
+            },
+            {
+                title: "Security Pleated Door",
+                desc: "Combines mosquito protection with enhanced security features for your doors.",
+                image: "security pleated.jpeg",
+                link: "security pleated door.html"
+            },
+            {
+                title: "Honeycomb Combined",
+                desc: "Unique honeycomb design offering privacy along with insect protection.",
+                image: "honeycomb.jpg",
+                link: "pleatedwithhoneycomb.html"
+            },
+            {
+                title: "Blackout Roller Blinds",
+                desc: "Complete light control with sleek roller mechanism for modern interiors.",
+                image: "blackoutroller.jpg",
+                link: "blackoutrollerblinds.html"
+            },
+            {
+                title: "Zebra Blinds",
+                desc: "Adjustable light control with alternating sheer and solid fabric bands.",
+                
+                image: "zebra blinds.jpeg",
+                link: "zebrablinds.html"
+            },
+            {
+                title: "Wooden Venetian",
+                desc: "Natural wood slats that bring warmth and elegance to any room.",
+                image: "woodenvenetian.jpeg",
+                link: "woodenvenetian.html"
+            },
+            {
+                title: "Zip-Track Blinds",
+                desc: "Perfect seal technology that completely blocks light and insects.",
+                image: "ziptrackblinds.jpg",
+                link: "ziptrackblinds.html"
+            },
+            {
+                title: "Designer Curtains",
+                desc: "Custom-made curtains in premium fabrics to complement your decor.",
+                image: "designercurtains.jpeg",
+                link: "designercurtains.html"
+            }
+        ];
+        
+        // Generate Gallery Items
+        const galleryTrack = document.querySelector('.gallery-track');
+        
+        function generateGalleryItems() {
+            // Clear existing content
+            galleryTrack.innerHTML = '';
+            
+            // Create two sets for seamless loop
+            for (let i = 0; i < 2; i++) {
+                galleryItems.forEach(item => {
+                    const galleryCard = document.createElement('div');
+                    galleryCard.className = 'gallery-card';
+                    galleryCard.onclick = () => window.location.href = item.link;
+                    
+                    galleryCard.innerHTML = `
+                        <img src="${item.image}" alt="${item.title}" class="gallery-img">
+                        <div class="gallery-card-content">
+                            <h3>${item.title}</h3>
+                            <p>${item.desc}</p>
+                            <div class="gallery-card-price">${item.price}</div>
+                        </div>
+                    `;
+                    
+                    galleryTrack.appendChild(galleryCard);
+                });
+            }
+        }
+        
+        // Initialize gallery on page load
+        document.addEventListener('DOMContentLoaded', generateGalleryItems);
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
